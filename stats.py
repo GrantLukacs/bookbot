@@ -12,3 +12,14 @@ def character_counter(string):
         else:
             final_total[i] = 1
     return final_total
+
+def sort_on(dict):
+    return dict["num"]
+
+def sorter(dictionary):
+    list = []
+    for i in dictionary:
+        if i.isalpha() == True:
+            list.append({"char" : i, "num" : dictionary[i]})
+    list.sort(reverse=True, key=sort_on)
+    return list
